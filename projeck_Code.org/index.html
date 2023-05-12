@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeOrg</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+          integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+          crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div align="center">
+<!--    <nav class="navbar navbar-light bg-light">-->
+        <h2>Luyện Tư Duy Logic</h2>
+<!--    </nav>-->
+</div>
+<div class="left">
+    <div id="game-play"></div>
+    <div id="button-start">
+        <button id="button-game" onclick="runGame()"><span><i class="fas fa-caret-right"></i> Chạy</span></button>
+        <button id="button-reset" onclick="resetGame()"><i class="fas fa-redo"></i> Reset</button>
+    </div>
+</div>
+<div class="right">
+    <div id="instructions">
+        <div id="instructions-header">
+            <span>Hướng dẫn</span>
+        </div>
+        <div id="instructions-body">
+            <div class="row">
+                <div class="instructions-image">
+                    <img src="img/small_static_avatar.png" style="max-width: 50px;" alt=""/>
+                </div>
+                <div class="speech-bubble">
+                    <p style="margin-top: 10px; margin-left: 10px">Hãy giúp tôi đi đến bên con lợn xanh kia
+                        nhé.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <table class="game-play-header">
+        <tr>
+            <td id="blocks-header" class="text-center">
+                Hành động
+            </td>
+            <td id="work-space-header" class="text-center">
+                Hành động sẽ làm
+            </td>
+        </tr>
+    </table>
+    <div class="game-play-body">
+        <div id="blocks">
+            <ul id="gallery" class="gallery ui-helper-reset ui-helper-clearfix">
+                <li>
+                    <div name="1" class="block">Đi về phía trước</div>
+                </li>
+                <li>
+                    <div name="2" class="block">Quay bên trái</div>
+                </li>
+                <li>
+                    <div name="3" class="block">Quay bên phải</div>
+                </li>
+            </ul>
+        </div>
+        <div id="work-space">
+            <div id="play">
+                <div class="play-block" id="begin-block">
+                    <p class="block-content">Bắt đầu</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/jQuery-function.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+<script src="js/general-variable.js"></script>
+<script src="js/bird.js"></script>
+<script src="js/pig.js"></script>
+<script src="js/game-board.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+
