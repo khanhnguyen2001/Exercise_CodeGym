@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number</title>
+</head>
+<body>
+First Number:<br>
+<input type="number" name="a" value=""><br><br>
+
+Second Number:<br>
+<input type="number" name="b"><br><br>
+
+Third Number:<br>
+<input type="number" name="c"><br><br>
+
+<input type="submit" value="Submit">
+
+<script>
+  if (a > b){
+    if (b > c){
+      document.getElementById(b).valueAsNumber;
+    }
+    else if (c > b){
+      document.getElementById(c).valueAsNumber;
+    }
+  else {
+    document.getElementById(a).valueAsNumber
+    }
+  }
+</script>
+</body>
+</html>
