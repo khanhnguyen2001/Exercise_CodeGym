@@ -6,26 +6,28 @@
 </head>
 <body>
 First Number:<br>
-<input type="number" name="a" value=""><br><br>
+<input type="number" id="a_number"><br><br>
 
 Second Number:<br>
-<input type="number" name="b"><br><br>
+<input type="number" id="b_number"><br><br>
 
 Third Number:<br>
-<input type="number" name="c"><br><br>
+<input type="number" id="c_number"><br><br>
 
-<input type="submit" value="Submit">
+<br><button onclick="maxClick()">Check max</button>
 
+<p id = "result"></p>
 <script>
-  if (a > b){
-    if (b > c){
-      document.getElementById(b).valueAsNumber;
-    }
-    else if (c > b){
-      document.getElementById(c).valueAsNumber;
-    }
-  else {
-    document.getElementById(a).valueAsNumber
+  function maxClick() {
+    let a = document.getElementById("a_number").valueAsNumber;
+    let b = document.getElementById("b_number").valueAsNumber;
+    let c = document.getElementById("c_number").valueAsNumber;
+    if (a > b && a > c) {
+      document.getElementById("result").textContent = "Giá trị max là: " + a;
+    } else if (b > a && b > c) {
+      document.getElementById("result").textContent = "Giá trị max là: " + b;
+    } else {
+      document.getElementById("result").textContent = "Giá trị max là: " + c;
     }
   }
 </script>
