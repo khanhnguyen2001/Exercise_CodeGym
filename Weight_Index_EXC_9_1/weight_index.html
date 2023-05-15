@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weight Index</title>
+</head>
+<body>
+  Cân nặng (kg): <input type="number" id="cannang_input"><br><br>
+  Chiều cao (m): <input type="number" id="chieucao_input"><br><br>
+  <br><button onclick="maxClick()">Xác nhận</button>
+
+  <p id="chiso"></p>
+
+<script>
+function maxClick(){
+  let chieucao = document.getElementById("chieucao_input").valueAsNumber;
+  let cannang = document.getElementById("cannang_input"). valueAsNumber;
+  let bmi = cannang / Math.pow(chieucao,2);
+
+
+  if (bmi < 18) {
+    document.getElementById("chiso").textContent = "Chỉ số BMI của bạn là: " + bmi + ". Tình trạng sức khỏe của bạn là Underweight";
+  } else if (bmi < 25.0) {
+    document.getElementById("chiso").textContent = "Chỉ số BMI của bạn là: " + bmi + ". Tình trạng sức khỏe của bạn là Normal";
+  } else if (bmi < 30.0) {
+    document.getElementById("chiso").textContent = "Chỉ số BMI của bạn là: " + bmi + ". Tình trạng sức khỏe của bạn là Overweight";
+  } else {
+    document.getElementById("chiso").textContent = "Chỉ số BMI của bạn là: " + bmi + ". Tình trạng sức khỏe của bạn là Obese";
+  }
+}
+</script>
+</body>
+</html>
