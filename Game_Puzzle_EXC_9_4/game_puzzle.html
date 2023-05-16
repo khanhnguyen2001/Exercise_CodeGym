@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Puzzle</title>
+</head>
+<body>
+<div align="center">
+<img style="width: 300px; height: 420px" src="https://tinhayvip.com/wp-content/uploads/2022/06/vsbg-5.jpg"
+     onclick="changeImg()" id="img">
+<button onclick="changeImg();">Changer</button>
+
+<script >
+  let img1 = "https://khoinguonsangtao.vn/wp-content/uploads/2023/01/hinh-nen-dong-vat-de-thuong-ngau.jpg";
+  let img2 = "https://kenh14cdn.com/2017/photo-6-1509256567632.jpg";
+  let img3 = "https://pgdconcuong.edu.vn/wp-content/uploads/2023/02/1676613199_440_500-Anh-12-Con-Giap-Dep-Cute-Ngau-VO-DOI.jpg";
+  let count = 1;
+
+  function changeImg() {
+
+    let imgE = document.getElementById("img");
+    if (count === 1) {
+      imgE.src = img2;
+      count++;
+    } else if (count === 2) {
+      imgE.src = img3;
+      count++;
+    } else if (count === 3) {
+      imgE.src = img1;
+      count = 1;
+    }
+  }
+</script>
+</div>
+</body>
+</html>
+
