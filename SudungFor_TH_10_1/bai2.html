@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng</title>
+</head>
+<body>
+<div align="center">
+  <h2>Tính tổng</h2>
+  <input type="number" id="tinhtong" placeholder="Nhập số lớn hơn 0">
+  <button onclick="Tong()">Kết quả</button>
+  <p id="result"></p>
+</div>
+
+</body>
+<script>
+  //let num = +prompt("Nhập vào số: ");
+  function Tong() {
+    let inputNumber = document.getElementById("tinhtong").value;
+    let sum = 0;
+    if (inputNumber > 0) {
+      for (let i = 1; i <= inputNumber; i += 1) {
+        sum = sum + i;
+      }
+      document.getElementById("result").innerHTML = ("Tổng các số từ 1 đến " + inputNumber + " là " + sum);
+    }
+    else {
+      alert("Bạn đã nhập sai giá trị! Mời nhập lại số lớn hơn 0");
+    }
+
+    //alert("Tổng từ 1 đến " + num + " là " + sum);
+  }
+</script>
+</html>
